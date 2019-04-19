@@ -1,33 +1,128 @@
-.App {
-  text-align: center;
+.game-container {
+    height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.game-screen {
+    padding: 35px 35px 50px;
+    background: linear-gradient(180deg, #264653, #2A9D8F, #E9C46A);
+    color: white;
+    box-shadow: 0 2px 14px 0 rgba(0, 0, 0, .6);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game__board {
+    display: flex;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.game__status {
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/*-------------------------------------------Square style------------------------------------------------*/
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-weight: bold;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.square--highlight {
+    background: #030303;
+    color: white;
+    animation: zoomHighlight 0.9s ease-in-out infinite alternate;
+}
+
+.square--highlight:focus,
+.square--highlight:active {
+    background: #030303;
+    color: white;
+
+}
+
+.current--move {
+    background: #999;
+}
+
+.square[data-pro="X"] {
+    color: #E76F51;
+}
+
+.square[data-pro="O"] {
+    color: #264653;
+}
+
+/*-------------------------------------------game__history-section style------------------------------------------------*/
+
+.game__history-section {
+    margin-top: 40px;
+    padding: 10px;
+    display: flex;
+    background: #08092650;
+    width: 100%;
+    max-width: 150px;
+    flex-direction: column;
+}
+
+
+.sorting-btn-wrapper {
+    text-align: right;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.sorting-btn__text {
+    margin-right: 10px;
+}
+
+.sorting-btn__icon {
+    width: 24px;
+}
+
+
+.history-btn {
+    color: white;
+    border: 1px solid rgb(186, 186, 186);
+    background: transparent;
+    display: block;
+
+}
+
+.history-btn:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.history-btn:focus,
+.history-btn:active {
+    outline: none;
+}
+
+.history-btn--selected {
+    font-weight: bold;
+    border: 3px solid rgb(255, 255, 255);
+}
+
+
+.cursor--pointer {
+    cursor: pointer;
+}
+
+@keyframes zoomHighlight {
+    0% {
+        transform: scale(0.85)
+    }
+
+    100% {
+        transform: scale(1)
+    }
 }
