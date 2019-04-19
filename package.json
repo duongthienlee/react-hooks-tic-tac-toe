@@ -1,17 +1,24 @@
 {
   "name": "tictactoe",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "homepage": "https://duongthienlee.github.io/react-hooks-tic-tac-toe",
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-router-dom": "^5.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
