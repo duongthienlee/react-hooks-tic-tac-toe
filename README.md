@@ -1,6 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## React tic tac toe with my solution using React Hooks, tutorial from [[https://reactjs.org/tutorial/tutorial.html#wrapping-up][React ]]
+## Live: https://duongthienlee.github.io/react-hooks-tic-tac-toe
+
+## React tic tac toe with my solution using React Hooks, tutorial from https://reactjs.org/tutorial/tutorial.html#wrapping-up 
 Improvements that make the tic-tac-toe game which are listed in order of increasing difficulty from React
 1. Display the location for each move in the format (col, row) in the move history list.
 2. Bold the currently selected item in the move list.
@@ -9,9 +11,11 @@ Improvements that make the tic-tac-toe game which are listed in order of increas
 5. When someone wins, highlight the three squares that caused the win.
 6. When no one wins, display a message about the result being a draw.
 My own ideas,
+
 ### Using React hooks {useState, useRef, useEffect}
 ### Highlight current move, some css style
 
 * Usage
 bootstrap 4
+react-router-dom v5
 
